@@ -9,3 +9,5 @@
 Контакты преподавателя (Омелюсик Владимир Степанович):
 - Эл. почта: vsomelyusik@gmail.com
 - Telegram: @vsomelyusik
+
+# https://github.com/V-Marco/intro_to_ml_py
