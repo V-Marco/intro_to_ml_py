@@ -5,7 +5,7 @@
 Материалы к занятиям:
 - Тема 1: Введение в Python (5, 12 и 19 октября):
   - [Актуальный Notebook](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python.ipynb)
-  - Notebook без решений.  
+  - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python_empty.ipynb).  
 - Тема 2: Python: продолжение (19 октября): 
 - Тема 3: Введение в анализ данных и статистику (19 октября).
 
