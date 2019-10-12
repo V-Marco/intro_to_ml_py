@@ -3,7 +3,11 @@
 Занятия проходят по субботам с 16:20 до 18:30 в аудитории 205 на Солянке.
 
 Материалы к занятиям:
-- Тема 1: Введение в Python: [5 октября](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python.ipynb), 12 октября
+- Тема 1: Введение в Python (5, 12 и 19) октября:
+  - [Актуальный Notebook](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python.ipynb)
+  - Notebook без решений.  
+- Тема 2: Python: продолжение (19 октября): 
+- Тема 3: Введение в анализ данных и статистику (19 октября).
 
 [Программа, списки и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
 
