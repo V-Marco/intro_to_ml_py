@@ -6,7 +6,8 @@
 - Тема 1: Введение в Python (5, 12 и 19 октября):
   - [Актуальный Notebook](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python.ipynb)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python_empty.ipynb) 
-- Тема 2: Python: продолжение (19 октября): 
+- Тема 2: Python: продолжение (19 октября):
+  - [Актуальный Notebook](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_2/python_contd.ipynb)
 - Тема 3: Введение в анализ данных и статистику (19 октября).
 
 [Программа, списки и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
