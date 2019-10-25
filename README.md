@@ -3,12 +3,15 @@
 Занятия проходят по субботам с 16:20 до 18:30 в аудитории 205 на Солянке.
 
 Материалы к занятиям:
-- Тема 1: Введение в Python (5, 12 и 19 октября):
-  - [Актуальный Notebook](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python.ipynb)
+- Тема 1: Введение в Python (5 и 12 октября):
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python.ipynb)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python_empty.ipynb) 
 - Тема 2: Python: продолжение (19 октября):
-  - [Актуальный Notebook](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_2/python_contd.ipynb)
-- Тема 3: Введение в анализ данных и статистику (19 октября).
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_2/python_contd.ipynb)
+  - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_2/python_contd_no_sol.ipynb)
+- Тема 3: Введение в анализ данных и статистику (19 октября):
+  - [Презентация](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_3/intro_to_ad_and_ml.pdf)
+- Тема 4: Элементы линейной алгебры. Numpy, Pandas, Matplotlib (26 октября).
 
 [Программа, списки и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
 
