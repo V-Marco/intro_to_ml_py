@@ -11,9 +11,12 @@
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_2/python_contd_no_sol.ipynb)
 - Тема 3: Введение в анализ данных и статистику (19 октября):
   - [Презентация](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_3/intro_to_ad_and_ml.pdf)
-- Тема 4: Элементы линейной алгебры. Numpy, Pandas, Matplotlib (26 октября).
+- Тема 4: Элементы линейной алгебры. Numpy, Pandas, Matplotlib (26 октября):
+  - [Задачи](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/linear_algebra_problems.pdf)
+  - Notebook с решениями
+  - Notebook без решений
 
-[Программа, списки и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
+[Программа и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
 
 Контакты преподавателя (Омелюсик Владимир Степанович):
 - Эл. почта: vsomelyusik@gmail.com
