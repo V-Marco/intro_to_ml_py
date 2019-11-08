@@ -13,6 +13,7 @@
   - [Презентация](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_3/intro_to_ad_and_ml.pdf)
 - Тема 4: Элементы линейной алгебры. Numpy, Pandas, Matplotlib (26 октября):
   - [Задачи](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/linear_algebra_problems.pdf)
+  - [Теория и решения](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Solutions/linear_algebra_problems_solutions.pdf)
   - Notebook с решениями
   - Notebook без решений
 
