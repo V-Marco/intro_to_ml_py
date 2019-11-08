@@ -15,7 +15,8 @@
   - [Задачи](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/linear_algebra_problems.pdf)
   - [Теория и решения](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Solutions/linear_algebra_problems_solutions.pdf)
   - Notebook с решениями
-  - Notebook без решений
+  - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/NumPy_Pandas_Matplotlib_LinAlg_no_sol.ipynb)
+  - [Данные к занятию](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Metro_Interstate_Traffic_Volume.csv)
 
 [Программа и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
 
