@@ -14,7 +14,7 @@ __Материалы к занятиям:__
 - Тема 4: Элементы линейной алгебры. Numpy, Pandas, Matplotlib (26 октября):
   - [Задачи](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/linear_algebra_problems.pdf)
   - [Теория и решения](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Solutions/linear_algebra_problems_solutions.pdf)
-  - [Notebook с решениями]](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/NumPy_Pandas_Matplotlib_LinAlg.ipynb)
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/NumPy_Pandas_Matplotlib_LinAlg.ipynb)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/NumPy_Pandas_Matplotlib_LinAlg_no_sol.ipynb)
   - [Данные к занятию](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Metro_Interstate_Traffic_Volume.csv)
 - Тема 5: Графический анализ данных и визуализация (16 ноября):
