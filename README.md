@@ -19,7 +19,7 @@ __Материалы к занятиям:__
   - [Данные к занятию](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Metro_Interstate_Traffic_Volume.csv)
 - Тема 5: Графический анализ данных и визуализация (16 ноября):
   - Notebook с решениями
-  - Notebook без решений
+  - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_5/visual_analysis_no_sol.ipynb)
  
 __Проверочные работы:__
 - Проверочная работа 1: Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
