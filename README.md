@@ -2,7 +2,7 @@
 
 Занятия проходят по субботам с 16:20 до 18:30 в аудитории 205 на Солянке.
 
-Материалы к занятиям:
+__Материалы к занятиям:__
 - Тема 1: Введение в Python (5 и 12 октября):
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python.ipynb)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_1/Intro_to_Python_empty.ipynb) 
@@ -14,9 +14,19 @@
 - Тема 4: Элементы линейной алгебры. Numpy, Pandas, Matplotlib (26 октября):
   - [Задачи](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/linear_algebra_problems.pdf)
   - [Теория и решения](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Solutions/linear_algebra_problems_solutions.pdf)
-  - Notebook с решениями
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/NumPy_Pandas_Matplotlib_LinAlg.ipynb)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/NumPy_Pandas_Matplotlib_LinAlg_no_sol.ipynb)
   - [Данные к занятию](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Metro_Interstate_Traffic_Volume.csv)
+- Тема 5: Графический анализ данных и визуализация (16 ноября):
+  - Notebook с решениями
+  - Notebook без решений
+ 
+__Проверочные работы:__
+- Проверочная работа 1: Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
+
+__Домашние задания:__
+- Домашнее задание 1: Введение в Python. Numpy, Pandas, Matplotlib. Графический анализ данных. (16 ноября – 16 декабря, 23:59).
+- Домашнее задание 2: Линейная регрессия, классификация, решающие деревья.
 
 [Программа и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
 
