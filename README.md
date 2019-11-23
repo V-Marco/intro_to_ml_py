@@ -18,14 +18,16 @@ __Материалы к занятиям:__
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/NumPy_Pandas_Matplotlib_LinAlg_no_sol.ipynb)
   - [Данные к занятию](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_4/Metro_Interstate_Traffic_Volume.csv)
 - Тема 5: Графический анализ данных и визуализация (16 ноября):
-  - Notebook с решениями
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_5/visual_analysis.ipynb)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_5/visual_analysis_no_sol.ipynb)
  
 __Проверочные работы:__
-- Проверочная работа 1: Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
+- [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
 
 __Домашние задания:__
-- Домашнее задание 1: Введение в Python. Numpy, Pandas, Matplotlib. Графический анализ данных. (16 ноября – 16 декабря, 23:59).
+- Домашнее задание 1: Введение в Python. Numpy, Pandas, Matplotlib. Графический анализ данных (16 ноября – 16 декабря, 23:59):
+  - [Notebook с заданием](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw1/hw_1_intro_to_ml_py.ipynb)
+  - [Данные к заданию](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw1/FISH.csv)
 - Домашнее задание 2: Линейная регрессия, классификация, решающие деревья.
 
 [Программа и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
