@@ -20,6 +20,8 @@ __Материалы к занятиям:__
 - Тема 5: Графический анализ данных и визуализация (16 ноября):
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_5/visual_analysis.ipynb)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_5/visual_analysis_no_sol.ipynb)
+- Тема 6: Введение в машинное обучение (23 ноября):
+  - [Презентация](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_6/intro_to_ml.pdf)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
