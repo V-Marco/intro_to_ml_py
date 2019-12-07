@@ -1,0 +1,9 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'linear_regression_problems.blg'
+[56] biber-darwin:303> INFO - === Sat Dec  7, 2019, 01:49:07
+[91] Biber.pm:359> INFO - Reading 'linear_regression_problems.bcf'
+[260] Biber.pm:835> INFO - Found 0 citekeys in bib section 0
+[283] Utils.pm:164> WARN - The file 'linear_regression_problems.bcf' does not contain any citations!
+[298] bbl.pm:608> INFO - Writing 'linear_regression_problems.bbl' with encoding 'UTF-8'
+[299] bbl.pm:712> INFO - Output to linear_regression_problems.bbl
+[299] Biber.pm:109> INFO - WARNINGS: 1

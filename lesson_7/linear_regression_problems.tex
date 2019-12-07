@@ -1,0 +1,434 @@
+\documentclass[11pt, a4paper]{extarticle}
+\setlength{\parskip}{0.2em}
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{mathtools}   % loads »amsmath«
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{physics}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{tabularx}
+
+\usepackage{hyperref}
+\hypersetup{				% Гиперссылки
+    unicode=true,           % русские буквы в раздела PDF
+    pdftitle={Заголовок},   % Заголовок
+    pdfauthor={Автор},      % Автор
+    pdfsubject={Тема},      % Тема
+    pdfcreator={Создатель}, % Создатель
+    pdfproducer={Производитель}, % Производитель
+    pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
+    colorlinks=true,       	% false: ссылки в рамках; true: цветные ссылки
+    linkcolor=black,          % внутренние ссылки
+    citecolor=black,        % на библиографию
+    filecolor=cyan,      % на файлы
+    urlcolor=gray           % на URL
+}
+
+\usepackage{setspace} % Интерлиньяж
+%\onehalfspacing % Интерлиньяж 1.5
+%\doublespacing % Интерлиньяж 2
+\singlespacing % Интерлиньяж 1
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+\usepackage{float}
+
+\title{Линейные методы регрессии}
+
+\author{Факультатив «Введение в анализ данных и машинное обучение на Python»}
+\date{\today}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=20mm,
+	top=20mm,
+	right=20mm
+}
+\setlength{\parindent}{0cm}
+
+\DeclareMathOperator{\Lin}{\mathrm{Lin}}
+\DeclareMathOperator{\Linp}{\Lin^{\perp}}
+\DeclareMathOperator*\plim{plim}
+%\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\sgn}{sign}
+\DeclareMathOperator{\sign}{sign}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\amn}{arg\,min}
+\DeclareMathOperator*{\amx}{arg\,max}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\pCorr}{pCorr}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+
+
+
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cBinom}{\mathcal{Binom}}
+\newcommand{\cPois}{\mathcal{Pois}}
+\newcommand{\cBeta}{\mathcal{Beta}}
+\newcommand{\cGamma}{\mathcal{Gamma}}
+
+\def \R{\mathbb{R}}
+\def \N{\mathbb{N}}
+\def \Z{\mathbb{Z}}
+
+\usepackage{multirow}
+\usepackage{array}
+
+
+\newcommand{\dx}[1]{\,\mathrm{d}#1} % для интеграла: маленький отступ и прямая d
+\newcommand{\ind}[1]{\mathbbm{1}_{\{#1\}}} % Индикатор события
+%\renewcommand{\to}{\rightarrow}
+\newcommand{\eqdef}{\mathrel{\stackrel{\rm def}=}}
+\newcommand{\iid}{\mathrel{\stackrel{\rm i.\,i.\,d.}\sim}}
+\newcommand{\const}{\mathrm{const}}
+\usepackage[inline]{enumitem}
+
+% вместо горизонтальной делаем косую черточку в нестрогих неравенствах
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+\usepackage[backend=biber,bibencoding=utf8,sorting=nty,maxcitenames=4,style=numeric-verb]{biblatex}
+
+\addbibresource{lit.bib}
+\usepackage{csquotes}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\renewcommand{\rmdefault}{cmss}
+%\renewcommand{\ttdefault}{cmss}
+\usepackage{sfmath}
+
+\usepackage{pgfplotstable}
+  
+\begin{document}
+	
+	\maketitle
+	
+	\section{Определение линейной регрессии}
+	
+	Линейная регрессия – модель вида:
+	\[
+	Y_i = \beta_0 + \beta_1X_{1, i} + \ldots + \beta_kX_{k, i} + u_i,
+	\]
+	где:
+	\begin{enumerate}
+		\item $u_i$ – случайная ошибка. 
+		\item $\beta_k$ – оцениваемые параметры (коэффициенты). 
+	\end{enumerate}
+
+	 Оценивается следующая спецификация модели:
+	\[
+	\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1X_{1, i} + \ldots + \hat{\beta}_kX_{k, i}.
+	\]
+	Виды линейной регрессии:
+	\begin{enumerate}
+		\item $Y_i = \beta_0 + \beta_1X_{1, i} + u_i$ – парная регрессия.
+		\item $Y_i = \beta_0 + \beta_1X_{1, i} + \ldots + \beta_kX_{k, i} + u_i$ – множественная регрессия. 
+	\end{enumerate}
+
+	\textbf{Важно:} линейность – по коэффициентам $\beta_j$!
+
+	\subsection{Задание}
+	Определите, являются ли линейной регрессией следующие модели. Если модель является линейной регрессией, определите её тип. Если модель является парной регрессией, изобразите линию истинной регрессии.
+	\begin{multicols}{2}
+	\begin{enumerate}[label=\alph*)]
+		\item $Y_i = 3 + 12X_{1, i} + u_i$.
+		\item $Y_i = 7 + u_i$.
+		\item $Y_i = \beta_0 + X_{1, i} + X_{2, i}^{\beta_2} + u_i$.
+		\item $Y_i = X_{1, i} + \beta_2X_{2, i}X_{3, i} + u_i$.
+		\item $Y_i = \beta_1X_{1, i} + \beta_2X_{1_i}^2 + u_i$.
+		\item $Y_i = \beta_0 + \beta_1X_{1, i} + u_i$.
+	\end{enumerate}
+	\end{multicols}
+
+	Истинную модель мы не знаем и никогда не узнаем! Поэтому будем думать об истинной модели в общем виде:
+	\[
+	Y_i = \beta_0 + \beta_1X_{1, i} + \ldots + \beta_kX_{k, i} + u_i
+	\]
+	
+	\subsection{Задание}
+	Изобразите графики оценённой линии регрессии. В случае множественной регрессии изобразите эскиз графика для каждой переменной. Поясните, чем являются коэффициенты модели: $\beta$ или $\hat{\beta}$.
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\alph*)]
+			\item $\hat{Y}_i = 1 + X_{1, i}$.
+			\item $\hat{Y}_i = 4X_{1, i}$.
+			\item $\hat{Y}_i = 1 + 4X_{1, i} - 2X_{2, i}$.
+			\item $\hat{Y}_i = 12 - 3X_{1, i} - X_{2, i} + 10X_{4, i}$.
+		\end{enumerate}
+	\end{multicols}
+
+	Линейную регрессию удобно записывать в матричном виде. Истинная регрессия:
+	\[
+	Y = X\beta + u,
+	\]
+	где $Y = \begin{pmatrix}
+	y_1 \\
+	y_2 \\
+	\vdots \\
+	y_n
+	\end{pmatrix}$, $X = \begin{pmatrix}
+	1 & X_{1,1} & X_{1,2} & \ldots & X_{1,k} \\
+	1 & X_{2,1} & X_{2,2} & \ldots & X_{2,k} \\
+	&&\ldots \\
+	1 & X_{n,1} & X_{n,2} & \ldots & X_{n,k} \\
+	\end{pmatrix}$, $\beta = \begin{pmatrix}
+	\beta_0 \\
+	\beta_1 \\
+	\vdots \\
+	\beta_k
+	\end{pmatrix}$, $u = \begin{pmatrix}
+	u_1 \\
+	u_2 \\
+	\vdots \\
+	u_n
+	\end{pmatrix}$. \vspace{1em}
+	
+	Оценённая регрессия:
+	\[
+	\hat{Y} = X\hat{\beta}.
+	\]
+
+	\subsection{Задание}
+	Определите размеры всех элементов матричной записи истинной и оценённой регрессии.
+	
+	\subsection{Задание}
+	Запишите в матричной записи следующие модели регрессии:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\alph*)]
+			\item $Y_i = \beta_0 + \beta_1X_{1, i} + u_i$.
+			\item $Y_i = \beta_0 + \beta_1X_{1, i} + \beta_2X_{2, i} + u_i$.
+			\item $\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1X_{1, i}$.
+			\item $\hat{Y}_i = 3 + 12X_{1, i} - 2X_{2, i} + 5X_{3, i} + 0X_{4, i}$
+		\end{enumerate}
+	\end{multicols}
+
+	\subsection{Задание}
+	Запишите в виде линейного уравнения следующие матричные модели:
+		\begin{enumerate}[label=\alph*)]
+			\item $Y = X\hat{\beta}, X = \begin{pmatrix}
+			1 & X_{1, 1} \\
+			1 & X_{2, 1} \\
+			\vdots & \vdots \\
+			1 & X_{n,1}
+			\end{pmatrix}, \hat{\beta} = \begin{pmatrix}
+			2 \\
+			-4 \\
+			\end{pmatrix}$.
+			\item $Y = X\hat{\beta}, X = \begin{pmatrix}
+			1 & X_{1, 1} &  X_{1, 2} \\
+			1 & X_{2, 1} &  X_{2, 2} \\
+			\vdots & \vdots \\
+			1 & X_{n,1} &  X_{n, 2}
+			\end{pmatrix}, \hat{\beta} = \begin{pmatrix}
+			\beta_0 \\
+			\beta_1 \\
+			\beta_2
+			\end{pmatrix}$.
+		\end{enumerate}
+	
+\section{Оценка модели линейной регрессии}
+
+\textbf{Важно:} Далее будем считать, что в спецификации модели есть константный признак (вектор единиц). 
+
+Выражения $e_i = Y_i - \hat{Y}_i$ называются \textbf{остатками} регрессии. Соответственно, $e = (Y - \hat{Y})$ – вектор остатков. Идея: минимизировать следующее выражение (метод наименьших квадратов, МНК), то есть функцию потерь:
+\[
+\sum_{i = 1}^{n} e_i^2 = \sum_{i = 1}^{n} (Y_i - \hat{\beta}_0 + \hat{\beta}_1X_{1, i} + \ldots + \hat{\beta}_kX_{k, i})^2 \rightarrow \min_{\hat{\beta}_0, \hat{\beta}_1, \ldots, \hat{\beta}_k}.
+\]
+В матричном виде:
+\[
+||e||^2 = ||Y - X\hat{\beta}||^2 \rightarrow \min_{\beta}
+\]
+
+\subsection{Задание}
+Геометрически докажите, что верна следующая формула:
+\[
+\hat{\beta} = (X^{T}X)^{-1}X^{T}Y
+\]
+
+\subsection{Задание}
+Найдите оценки коэффициентов для следующей модели:
+\[
+Y = X\beta + u.
+\]
+\[
+\hat{Y} = X\hat{\beta}.
+\]
+\[
+Y = \begin{pmatrix}
+4 \\
+6 \\ 
+3
+\end{pmatrix}, X = \begin{pmatrix}
+1 & 2 \\
+1 & 3 \\
+1 & 2
+\end{pmatrix}
+\]
+
+\section{Проблемы модели линейной регрессии}
+
+\begin{enumerate}
+ \item \textbf{Мультиколлинеарность} – ситуация, когда признаки линейно зависимы, то есть
+\[
+X_j = a + bX_m,
+\]
+где $a \in \R$, $b \in \R$.
+
+На практике плоха и ситуация, когда признаки обладают высокой корреляцией.
+
+Проблемы:
+\begin{enumerate}[label = \alph*)]
+	\item Хранение избыточной информации.
+	\item Вредит некоторым методам машинного обучения.
+\end{enumerate}
+
+Решение: отбор признаков.
+
+\item \textbf{Переобучение}: на практике – когда оценённые коэффициенты слишком большие. 
+
+Решение: регуляризация:
+\begin{enumerate}
+	\item $L_1$-регуляризация (lasso): $||Y - X\hat{\beta}||^2 + \sum_{j = 1}^{k} |\beta_j| \rightarrow \min_{\beta}$.
+	\item $L_2$-регуляризация (ridge): $||Y - X\hat{\beta}||^2 + \sum_{j = 1}^{k} \beta_j^2 \rightarrow \min_{\beta}$.
+\end{enumerate}
+
+$L_1$-регуляризация позволяет отобрать признаки, так как зануляет некоторые оценки коэффициентов. 
+
+\item \textbf{Проблемы со сходимостью:} на практике оценка модели происходит не по аналитической формуле, а методами оптимизации. Для лучшей сходимости рекомендуется привести признаки к одинаковому масштабу. 
+
+Выборочное среднее: 
+\[
+\bar{X} = \dfrac{X_1 + X_2 + \ldots + X_n}{n}.
+\]
+
+Выборочная дисперсия:
+\[
+sVar = \dfrac{1}{n-1} \sum_{i = 1}^{n} (X_i - \bar{X})^2.
+\]
+
+Выборочное стандартное отклонение:
+\[
+s\sigma = \sqrt{sVar}.
+\]
+
+Масштабирование (стандартизация): 
+\[
+\tilde{X}_j = \dfrac{X_j - \bar{X}_j}{s\sigma_{X_j}}.
+\]
+
+Также можно масштабировать к максимальному значению признака (то есть делить на максимальное значение признака):
+\[
+\tilde{X}_{jm} = \dfrac{X_{jm}}{\max_m\{X_{jm}\}}
+\]
+
+\end{enumerate}
+
+\subsection{Задание}
+Найдите выборочное среднее, выборочную дисперсию и выборочное стандартное отклонение для следующих выборок:
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+	\item $1, 2, 3, 4$.
+	\item $0, 0, 1, -2$.
+	\item $1, 2$.
+	\item $-1, 2, 2, 2, 2$.
+\end{enumerate}
+\end{multicols}
+
+
+\section{Функционалы (метрики) качества линейной регрессии}
+
+\begin{enumerate}
+	\item Среднеквадратичная ошибка (Mean Squared Error, MSE):
+	\[
+	MSE = \dfrac{1}{n}\sum_{i=1}^{n}(\hat{Y}_i - Y_i)^2.
+	\]
+	\item Средняя абсолютная ошибка (Mean Absolute Error, MAE):
+	\[
+	MAE = \dfrac{1}{n}\sum_{i = 1}^{n}|\hat{Y}_i - Y_i|
+	\]
+	Выше устойчивость к выбросам.
+	\item $RMSE = \sqrt{MSE}$
+	\item $R^2$ – коэффициент детерминации:
+	\[
+	R^2 = \dfrac{||\hat{Y} - \bar{Y}||^2}{||Y - \bar{Y}||^2} = 1 - \dfrac{||Y - \hat{Y}||^2}{||Y - \bar{Y}||^2}.
+	\]
+	Показывает долю дисперсии, объяснённой моделью, в общей дисперсии зависимой переменной. 
+	Свойства:
+	\begin{itemize}
+		\item $R^2 \in [0, 1]$ для разумных моделей.
+		\item $R^2 = 1$ – идеальная модель.
+		\item $R^2 = 0$ – модель предсказывает на уровне константной.
+		\item $R^2 < 0$ – модель предсказывает хуже константной. 
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Задание}
+Найдите MSE, MAE, RMSE и $R^2$, если имеется следующая выдача:
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+	\item $Y = \begin{pmatrix}
+	1 \\
+	2 \\
+	3
+	\end{pmatrix}$, $\hat{Y} = \begin{pmatrix}
+	4 \\
+	0 \\
+	3
+	\end{pmatrix}$
+	\item $Y = \begin{pmatrix}
+	7 \\
+	-1 \\
+	9
+	\end{pmatrix}$, $\hat{Y} = \begin{pmatrix}
+	5 \\
+	5 \\
+	5
+	\end{pmatrix}$
+	\item $Y = \begin{pmatrix}
+		3 \\
+		0 \\
+		0
+	\end{pmatrix}$, $\hat{Y} = \begin{pmatrix}
+	3 \\
+	0 \\
+	0
+	\end{pmatrix}$
+	\item $Y = \begin{pmatrix}
+	1 \\
+	2 \\
+	3 \\
+	\end{pmatrix}$, $\hat{Y} = \begin{pmatrix}
+	10 \\
+	-10 \\
+	-9
+	\end{pmatrix}$
+\end{enumerate}
+\end{multicols}
+	
+\end{document}
