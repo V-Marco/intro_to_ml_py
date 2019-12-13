@@ -28,7 +28,7 @@ __Материалы к занятиям:__
 - Тема 7: Линейные методы регрессии (7 декабря):
   - [Задачи и теория](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_problems.pdf)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_intro_no_sol.ipynb)
-  - Notebook с решениями
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_intro.ipynb)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
