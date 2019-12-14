@@ -29,7 +29,11 @@ __Материалы к занятиям:__
   - [Задачи и теория](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_problems.pdf)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_intro_no_sol.ipynb)
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_intro.ipynb)
+  - [Задачи II](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_8/linear_regression_problems.pdf)
 - Тема 8: Простая классификация. Метод k ближайших соседей (kNN) (14 декабря)
+  - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_8/classification_knn_no_sol.ipynb)
+  - [Notebook с решениями]
+  - [Данные к занятию](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_8/UniversalBank.csv)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
