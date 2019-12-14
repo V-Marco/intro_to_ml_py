@@ -32,7 +32,7 @@ __Материалы к занятиям:__
   - [Задачи II](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_8/linear_regression_problems.pdf)
 - Тема 8: Простая классификация. Метод k ближайших соседей (kNN) (14 декабря)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_8/classification_knn_no_sol.ipynb)
-  - [Notebook с решениями]
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_8/classification_knn.ipynb)
   - [Данные к занятию](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_8/UniversalBank.csv)
  
 __Проверочные работы:__
