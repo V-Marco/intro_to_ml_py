@@ -25,6 +25,11 @@ __Материалы к занятиям:__
 - Практическое занятие 1: Предварительный анализ данных и построение линейной модели (30 ноября):
   - [Задание](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/task_for_ind_work.pdf)
   - [Данные](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/weatherHistory.csv)
+- Тема 7: Линейные методы регрессии (7 декабря):
+  - [Задачи и теория](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_problems.pdf)
+  - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_intro_no_sol.ipynb)
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_7/linear_regression_intro.ipynb)
+- Тема 8: Простая классификация. Метод k ближайших соседей (kNN) (14 декабря)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
