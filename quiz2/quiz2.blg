@@ -1,0 +1,9 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[1] Config.pm:357> INFO - Logfile is 'quiz2.blg'
+[69] biber-darwin:303> INFO - === Sun Dec 15, 2019, 18:36:40
+[106] Biber.pm:359> INFO - Reading 'quiz2.bcf'
+[264] Biber.pm:835> INFO - Found 0 citekeys in bib section 0
+[281] Utils.pm:164> WARN - The file 'quiz2.bcf' does not contain any citations!
+[290] bbl.pm:608> INFO - Writing 'quiz2.bbl' with encoding 'UTF-8'
+[290] bbl.pm:712> INFO - Output to quiz2.bbl
+[290] Biber.pm:109> INFO - WARNINGS: 1

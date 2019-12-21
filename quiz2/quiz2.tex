@@ -1,0 +1,187 @@
+\documentclass[11pt, a4paper]{extarticle}
+\setlength{\parskip}{0.2em}
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{mathtools}   % loads »amsmath«
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{physics}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{tabularx}
+
+\usepackage{hyperref}
+\hypersetup{				% Гиперссылки
+    unicode=true,           % русские буквы в раздела PDF
+    pdftitle={Заголовок},   % Заголовок
+    pdfauthor={Автор},      % Автор
+    pdfsubject={Тема},      % Тема
+    pdfcreator={Создатель}, % Создатель
+    pdfproducer={Производитель}, % Производитель
+    pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
+    colorlinks=true,       	% false: ссылки в рамках; true: цветные ссылки
+    linkcolor=black,          % внутренние ссылки
+    citecolor=black,        % на библиографию
+    filecolor=cyan,      % на файлы
+    urlcolor=gray           % на URL
+}
+
+\usepackage{setspace} % Интерлиньяж
+%\onehalfspacing % Интерлиньяж 1.5
+%\doublespacing % Интерлиньяж 2
+\singlespacing % Интерлиньяж 1
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+\usepackage{float}
+
+\title{Проверочная работа 2}
+
+\author{Факультатив «Введение в анализ данных и машинное обучение на Python»}
+\date{21 декабря 2019}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=20mm,
+	top=20mm,
+	right=20mm
+}
+%\setlength{\parindent}{0cm}
+
+\DeclareMathOperator{\Lin}{\mathrm{Lin}}
+\DeclareMathOperator{\Linp}{\Lin^{\perp}}
+\DeclareMathOperator*\plim{plim}
+%\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\sgn}{sign}
+\DeclareMathOperator{\sign}{sign}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\amn}{arg\,min}
+\DeclareMathOperator*{\amx}{arg\,max}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\pCorr}{pCorr}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+
+
+
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cBinom}{\mathcal{Binom}}
+\newcommand{\cPois}{\mathcal{Pois}}
+\newcommand{\cBeta}{\mathcal{Beta}}
+\newcommand{\cGamma}{\mathcal{Gamma}}
+
+\def \R{\mathbb{R}}
+\def \N{\mathbb{N}}
+\def \Z{\mathbb{Z}}
+
+\usepackage{multirow}
+\usepackage{array}
+
+
+\newcommand{\dx}[1]{\,\mathrm{d}#1} % для интеграла: маленький отступ и прямая d
+\newcommand{\ind}[1]{\mathbbm{1}_{\{#1\}}} % Индикатор события
+%\renewcommand{\to}{\rightarrow}
+\newcommand{\eqdef}{\mathrel{\stackrel{\rm def}=}}
+\newcommand{\iid}{\mathrel{\stackrel{\rm i.\,i.\,d.}\sim}}
+\newcommand{\const}{\mathrm{const}}
+\usepackage[inline]{enumitem}
+
+% вместо горизонтальной делаем косую черточку в нестрогих неравенствах
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+\usepackage[backend=biber,bibencoding=utf8,sorting=nty,maxcitenames=4,style=numeric-verb]{biblatex}
+
+\addbibresource{lit.bib}
+\usepackage{csquotes}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\renewcommand{\rmdefault}{cmss}
+%\renewcommand{\ttdefault}{cmss}
+\usepackage{sfmath}
+
+\usepackage{pgfplotstable}
+  
+\begin{document}
+	
+	\maketitle
+	
+	\section*{Задание 1} 
+	
+	Пусть представлены следующие данные:
+	\[
+	Y = \begin{pmatrix}
+	6 \\
+	12 \\
+	24 \\
+	\end{pmatrix}, \text{ } X = \begin{pmatrix}
+	1 & 6 \\
+	1 & 3 \\
+	1 & 6
+	\end{pmatrix}
+	\]
+	\begin{enumerate}[label=\alph*)]
+		\item Оценивается следующая модель:
+		\[Y = X\beta + u,\]
+		где $u$ – случайная ошибка.
+		
+		Найдите оценки коэффициентов модели. Найдите прогноз модели.
+		\item Нанесите выборку на диаграмму рассеяния. Постройте оценённую линию регрессии. 
+		\item Определите направление корреляции между $X$ и $Y$.
+		\item Найдите выборочное среднее и выборочную дисперсию неконстантного признака.  
+		\item Найдите коэффициент детерминации данной регрессии. 
+	\end{enumerate}
+
+	\section*{Задание 2}
+	\begin{enumerate}[label=\alph*)]
+		\item Запишите уравнение парной регрессии. Запишите уравнение оценённой линии в этой регрессии. 
+		\item Запишите уравнение множественной регрессии в общем виде. Под каждым элементом (матрицей или вектором) подпишите его размер.
+		\item Является ли линейной регрессией следующая модель:
+		$Y = \beta_0 + \beta_1X_1X_2X_3 + u$?
+		\item Является ли линейной регрессией следующая модель:
+		$Y = \beta_0 + \beta_1^2X_1 + \beta_2^3X_2 + u$?
+		\item Является ли линейной регрессией следующая модель:
+		$Y = \beta_0 + \beta_1X_1^5 + u$?
+	\end{enumerate}
+	
+	\section*{Задание 3}
+	\begin{enumerate}[label=\alph*)]
+		\item Что такое мультиколлинеарность признаков? К чему она может привести? Что можно сделать для устранения этой проблемы? 
+		\item Опишите (по смыслу, без формул), как регуляризация помогает справляться с переобучением линейной регрессии.
+	\end{enumerate}
+
+	\section*{Задание 4}
+	\begin{enumerate}[label=\alph*)]
+		\item Опишите своими словами, что такое машинное обучение. В чём основная цель машинного обучения?
+		\item Какие три типа задач машинного обучения в зависимости от наличия целевой переменной выделяют? 
+		\item Приведите пример задачи многоклассовой классификации. 
+		\item Как происходит обучение алгоритма (модели) машинного обучения? 
+		\item Чем функционал качества отличается от метрики качества?
+		\item Что такое недообучение? На одном графике схематически изобразите недообученную и корректно обученную модель. 
+	\end{enumerate}
+	
+\end{document}
