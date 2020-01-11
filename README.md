@@ -37,9 +37,10 @@ __Материалы к занятиям:__
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
+- [Проверочная работа 2](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz2/quiz2.pdf): Введение в машинное обучение. Линейная регрессия. (21 декабря)
 
 __Домашние задания:__
-- Домашнее задание 1: Введение в Python. Numpy, Pandas, Matplotlib. Графический анализ данных (16 ноября – 16 декабря, 23:59):
+- Домашнее задание 1: Введение в Python. Numpy, Pandas, Matplotlib. Графический анализ данных (16 ноября – 10 января, 23:59):
   - [Notebook с заданием](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw1/hw_1_intro_to_ml_py.ipynb)
   - [Данные к заданию](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw1/FISH.csv)
 - Домашнее задание 2: Линейная регрессия, классификация, решающие деревья.
