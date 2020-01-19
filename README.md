@@ -48,7 +48,9 @@ __Домашние задания:__
 - Домашнее задание 1: Введение в Python. Numpy, Pandas, Matplotlib. Графический анализ данных (16 ноября – 10 января, 23:59):
   - [Notebook с заданием](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw1/hw_1_intro_to_ml_py.ipynb)
   - [Данные к заданию](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw1/FISH.csv)
-- Домашнее задание 2: Линейная регрессия, классификация, решающие деревья.
+- Домашнее задание 2: Линейная регрессия, классификация, решающие деревья. (19 января – 20 февраля, 23:59):
+  - [Notebook с заданием](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw2/hw_2.ipynb)
+  - [Данные к заданию](https://github.com/V-Marco/intro_to_ml_py/blob/master/hw1/FISH.csv)
 
 [Программа и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
 
