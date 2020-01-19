@@ -37,6 +37,8 @@ __Материалы к занятиям:__
 - Тема 9: Решающие деревья. Случайный лес (11 января)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_9/decision_trees_no_sol.ipynb)
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_9/decision_trees.ipynb)
+- Тема 10: Программирование собственной линейной модели (18 января, 25 января)
+  - [Notebook с результатами работы 18 января](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_18_01.ipynb)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
