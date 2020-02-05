@@ -40,7 +40,7 @@ __Материалы к занятиям:__
 - Тема 10: Программирование собственной линейной модели (18 января, 25 января)
   - [Notebook с результатами работы 18 января](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_18_01.ipynb)
   - [Notebook с законченной моделью (25 января)](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_25_01.ipynb)
-- Тема 11: Анализ набора данных «Титаник» (25 января, 8 февраля)
+- Тема 11: Анализ наборов данных «Титаник» и «Ирисы» (25 января, 8 февраля)
   - [Задание на формирование исследовательского вопроса](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/task.pdf)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
   - Notebook с решениями
@@ -48,6 +48,7 @@ __Материалы к занятиям:__
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
 - [Проверочная работа 2](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz2/quiz2.pdf): Введение в машинное обучение. Линейная регрессия. (21 декабря)
+- Проверочная работа 3. (8 февраля)
 
 __Домашние задания:__
 - Домашнее задание 1: Введение в Python. Numpy, Pandas, Matplotlib. Графический анализ данных (16 ноября – 10 января, 23:59):
