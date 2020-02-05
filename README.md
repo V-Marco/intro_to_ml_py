@@ -39,7 +39,8 @@ __Материалы к занятиям:__
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_9/decision_trees.ipynb)
 - Тема 10: Программирование собственной линейной модели (18 января, 25 января)
   - [Notebook с результатами работы 18 января](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_18_01.ipynb)
-- Тема 11: Анализ набора данных «Титаник» (25 января)
+  - [Notebook с законченной моделью (25 января)](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_25_01.ipynb)
+- Тема 11: Анализ набора данных «Титаник» (25 января, 8 февраля)
   - [Задание на формирование исследовательского вопроса](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/task.pdf)
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
   - Notebook с решениями
