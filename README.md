@@ -42,8 +42,7 @@ __Материалы к занятиям:__
   - [Notebook с законченной моделью (25 января)](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_25_01.ipynb)
 - Тема 11: Анализ наборов данных «Титаник» и «Ирисы» (25 января, 8 февраля)
   - [Задание на формирование исследовательского вопроса](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/task.pdf)
-  - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
-  - Notebook с решениями
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
