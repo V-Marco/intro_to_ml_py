@@ -40,9 +40,11 @@ __Материалы к занятиям:__
 - Тема 10: Программирование собственной линейной модели (18 января, 25 января)
   - [Notebook с результатами работы 18 января](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_18_01.ipynb)
   - [Notebook с законченной моделью (25 января)](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_10/own_linear_model_25_01.ipynb)
-- Тема 11: Анализ наборов данных «Титаник» и «Ирисы» (25 января, 8 февраля)
+- Тема 11: Анализ наборов данных «Титаник» и «Ирисы» (25 января, 15 февраля, 22 февраля)
   - [Задание на формирование исследовательского вопроса](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/task.pdf)
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
+- Тема 12: Нейронные сети (22 февраля)
+  - Notebook из Google Colab
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
