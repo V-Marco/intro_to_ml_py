@@ -44,7 +44,7 @@ __Материалы к занятиям:__
   - [Задание на формирование исследовательского вопроса](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/task.pdf)
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
 - Тема 12: Нейронные сети (22 февраля)
-  - Notebook из Google Colab (от 29 февраля)[https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_12/neural_networks_cifar.ipynb]
+  - [Notebook из Google Colab (от 29 февраля)](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_12/neural_networks_cifar.ipynb)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
