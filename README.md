@@ -43,7 +43,7 @@ __Материалы к занятиям:__
 - Тема 11: Анализ наборов данных «Титаник» и «Ирисы» (25 января, 15 февраля, 22 февраля)
   - [Задание на формирование исследовательского вопроса](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/task.pdf)
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
-- Тема 12: Нейронные сети (22 февраля)
+- Тема 12: Нейронные сети (22 февраля, 29 февраля, 7 марта)
   - [Notebook из Google Colab (от 29 февраля)](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_12/neural_networks_cifar.ipynb)
  
 __Проверочные работы:__
