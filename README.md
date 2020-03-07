@@ -45,7 +45,9 @@ __Материалы к занятиям:__
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
 - Тема 12: Нейронные сети (22 февраля, 29 февраля, 7 марта)
   - [Notebook из Google Colab](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_12/neural_networks_cifar.ipynb)
-  - [Хорошая статья на Habr](https://habr.com/ru/post/312450/)
+  - [Лекция об устройстве нейронных сетей (важны картинки, математику можно опустить)](https://github.com/ZEMUSHKA/mml-minor/blob/master/lectures/lecture3.pdf)
+  - [Лекция о свёрточных нейронных сетях (важны картинки, математику можно опустить)](https://github.com/ZEMUSHKA/mml-minor/blob/master/lectures/lecture4.pdf)
+  - [Хорошая статья на Habr о введении в нейронные сети](https://habr.com/ru/post/312450/)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
