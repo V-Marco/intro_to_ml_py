@@ -44,7 +44,10 @@ __Материалы к занятиям:__
   - [Задание на формирование исследовательского вопроса](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/task.pdf)
   - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_11/Titanic.ipynb)
 - Тема 12: Нейронные сети (22 февраля, 29 февраля, 7 марта)
-  - [Notebook из Google Colab (от 29 февраля)](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_12/neural_networks_cifar.ipynb)
+  - [Notebook из Google Colab](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_12/neural_networks_cifar.ipynb)
+  - [Лекция об устройстве нейронных сетей (важны картинки, математику можно опустить)](https://github.com/ZEMUSHKA/mml-minor/blob/master/lectures/lecture3.pdf)
+  - [Лекция о свёрточных нейронных сетях (важны картинки, математику можно опустить)](https://github.com/ZEMUSHKA/mml-minor/blob/master/lectures/lecture4.pdf)
+  - [Хорошая статья на Habr о введении в нейронные сети](https://habr.com/ru/post/312450/)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
@@ -85,6 +88,7 @@ __Проекты:__
 ### Этапы и сроки по проектам:
  
   - Этап 1: До 21 февраля включительно необходимо сообщить преподавателю выбранную исследовательскую задачу, факт наличия данных и предполагаемую модель.
+  - Этап 2: Дата выступления: 28 марта.
 
 [Программа и оценки](https://docs.google.com/spreadsheets/d/1cphUB8QTql3f7Aoe57oYgVeWKIc8qAg5HtzL95zB4SE/edit?usp=sharing)
 
