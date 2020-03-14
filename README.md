@@ -51,6 +51,7 @@ __Материалы к занятиям:__
 - Тема 13: Кластеризация (13 марта):
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_13/les_clustering_no_answ.ipynb)
   - Notebook с решениями
+  - [Данные](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_13/data_mouse.csv)
  
 __Проверочные работы:__
 - [Проверочная работа 1](https://github.com/V-Marco/intro_to_ml_py/blob/master/quiz1/quiz1.pdf): Введение в Python. Введение в анализ данных. Элементы линейной алгебры. (16 ноября)
