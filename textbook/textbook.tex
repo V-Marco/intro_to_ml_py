@@ -1,0 +1,307 @@
+\documentclass[11pt, a4paper]{extarticle}
+
+%% Язык
+\usepackage{cmap} % Поиск в PDF
+\usepackage{mathtext} % Кириллица в формулах
+\usepackage[T2A]{fontenc} % Кодировка
+\usepackage[utf8]{inputenc} % Кодировка
+\usepackage[english,russian]{babel} % Локализация, переносы
+
+%% Шрифты
+
+% Serif
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Шрифт для математики
+
+% Sans-serif
+%\renewcommand{\rmdefault}{cmss}
+%\renewcommand{\ttdefault}{cmss}
+%\usepackage{sfmath}
+
+% Настройки для xelatex
+%\usepackage{polyglossia} % Для выбора языка в xelatex
+%\setmainlanguage{russian}
+%\setotherlanguages{english}
+% Ligatures=TeX is on by default
+% https://tex.stackexchange.com/questions/323542/
+%\setmainfont[Ligatures=TeX]{Cantarell}
+%\newfontfamily{\cyrillicfonttt}{Times New Roman}
+%\newfontfamily\cyrillicfont{Cantarell}[Script=Cyrillic]
+%\setsansfont[Ligatures=TeX]{Cantarell}
+%\newfontfamily\cyrillicfontsf{Cantarell}[Script=Cyrillic]
+%\setmonofont{Courier New}
+%\newfontfamily\cyrillicfonttt{Courier New}[Script=Cyrillic]
+
+%% Математика
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
+\usepackage{icomma}
+
+% Операторы
+\DeclareMathOperator*\plim{plim}
+\DeclareMathOperator{\sgn}{sign}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\amn}{arg\,min}
+\DeclareMathOperator*{\amx}{arg\,max}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\pCorr}{pCorr}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+% Распределения
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cBinom}{\mathcal{Binom}}
+\newcommand{\cPois}{\mathcal{Pois}}
+\newcommand{\cBeta}{\mathcal{Beta}}
+\newcommand{\cGamma}{\mathcal{Gamma}}
+
+% Множества
+\def \R{\mathbb{R}}
+\def \N{\mathbb{N}}
+\def \Z{\mathbb{Z}}
+
+% Другое
+\newcommand{\dx}[1]{\,\mathrm{d}#1} % Для интеграла: маленький отступ и прямая d
+\newcommand{\ind}[1]{\mathbbm{1}_{\{#1\}}} % Индикатор события
+\newcommand{\iid}{\mathrel{\stackrel{\rm i.\,i.\,d.}\sim}}
+\newcommand{\const}{\mathrm{const}}
+
+%% Изображения
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{physics}
+\usepackage{wrapfig} % Обтекание рисунков и таблиц текстом
+\usepackage{tikz}
+
+%% Таблицы
+\usepackage{array, tabularx, tabulary, booktabs}
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+
+%% Cписки
+\usepackage{multicol}
+\usepackage{enumitem}
+
+%% Гиперссылки
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{8b00ff}
+\hypersetup{colorlinks = true,
+			linkcolor = linkcolor,
+			urlcolor = linkcolor,
+			citecolor = linkcolor}
+
+%% Выравнивание
+\setlength{\parskip}{0.5em} % Расстояние между абзацами
+\usepackage{geometry} % Поля
+\geometry{
+	a4paper,
+	left=20mm,
+	top=20mm,
+	right=20mm}
+\setlength{\parindent}{0cm} % Отступ (красная строка)
+\linespread{1.0} % Интерлиньяж
+
+%% Оформление
+
+% Красивый серый фон
+\usepackage{framed} 
+\definecolor{shadecolor}{gray}{0.9}
+
+% Код
+% https://www.overleaf.com/learn/latex/code_listing#Code_styles_and_colours
+\newcommand{\code}[1]{{\tt #1}}
+\usepackage{listings}
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{white},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Колонтитулы
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{\thepage}
+
+% Разделы и подразделы
+\usepackage[sf, sl, outermarks]{titlesec}
+\titleformat{\section}{\Large\bfseries\sffamily}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\large\sffamily}{\thesubsection}{0.5em}{}
+
+
+% Содержание
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\hspace{4.5em}\normalfont}
+\renewcommand{\cftsubsecfont}{\hspace{5em}\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont\hfill}
+\renewcommand{\cfttoctitlefont}{\large\normalfont\hfill}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecafterpnum}{\hspace*{5.5em}\hfill}
+\renewcommand{\cftsubsecafterpnum}{\hspace*{5.5em}\hfill}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+
+%% Комментарии
+\usepackage{comment}
+
+%% To-do
+\usepackage{todonotes}
+
+%% Литература
+\usepackage[backend = biber,
+			bibencoding = utf8, 
+			sorting = nty, 
+			maxcitenames = 4,
+			style = numeric-verb]{biblatex}
+\addbibresource{lit.bib}
+\usepackage{csquotes}
+
+%% Заголовок
+\title{Конспекты лекций для курса \\ <<Введение в машинное обучение и анализ данных на Python>>}
+\author{Омелюсик Владимир}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	\tableofcontents
+	
+	\section{Установка программного обеспечения}
+	
+	\subsection{Anaconda и Jupyter Notebook}
+	%Установка программного обеспечения
+	На нашем курсе мы будем использовать \lstinline|Python| -- современный и достаточно продвинутый язык программирования, который предоставляет много удобных инструментов для анализа данных и машинного обучения.
+	Как и многие другие языки, \lstinline|Python| поставляется бесплатно, и установить его на свой компьютер может каждый желающий.
+	Тем не менее, <<сырой>> \lstinline|Python| представляет из себя набор методов для работы с простыми объектами: числами, строками и так далее: мы можем написать программу в любом текстовом редакторе и попросить \lstinline|Python| выполнить её.
+	Понятно, что для высокоуровневых задач, таких как машинное обучение и анализ данных, такой подход не очень удобен.
+	
+	Поэтому нам также потребуются дополнительные инструменты: во-первых, удобная \textit{среда}, в которой мы будем программировать. 
+	Во-вторых, уже написанные методы для работы с анализом данных -- без них нам придётся программировать всё самостоятельно с нуля, а это займёт слишком много времени и усилий.
+	Такие уже написанные кем-то методы обычно распространяются в виде \textit{библиотек}, которые можно установить, подключить и использовать.
+	
+	В этом курсе мы будем использовать \lstinline|Anaconda| -- потрясающий дистрибутив типа <<всё в одном>>.
+	При установке \lstinline|Anaconda| на компьютер устанавливается \lstinline|Python|, среда программирования \lstinline|Spyder|, удобный инструмент для анализа данных \lstinline|Jupyter Notebook|, значительное число полезных библиотек и некоторые другие программы.
+	
+	\begin{shaded}
+	\textbf{Инструкция по установке} \lstinline|Anaconda|.
+	\begin{enumerate}
+		\item Установщик \lstinline|Anaconda| можно загрузить с \href{https://www.anaconda.com/products/individual}{официального сайта}.
+		Почти в самом низу страницы выбрите вашу операционную систему и скачайте Graphical Installer для последней доступной версии \lstinline|Python| (на момент написания это версия \textbf{3.8}).
+		\item Запустите скачанный файл и установите \lstinline|Anaconda| в соответствии с инструкциями.
+		\item После установки на Вашем компьютере появится приложение \lstinline|Anaconda Navigator|. Запустите его.
+	\end{enumerate}
+	\end{shaded}
+
+	\lstinline|Anaconda Navigator| показывает входящие в \lstinline|Anaconda| программы в удобном виде.
+	
+	Непосредственно работать с анализом данных мы будем в программе \lstinline|Jupyter Notebook|.
+	Эта программа проста в освоении и позволяет выполнять код кусочками, что оказывается очень удобным во многих задачах.
+	Также она предоставляет простые средства для красивого оформления результатов исследований.
+	Программа поставляется вместе с \lstinline|Anaconda|.
+	
+	\begin{shaded}
+		\textbf{Инструкция по установке} \lstinline|Jupyter Notebook|.
+		\begin{enumerate}
+			\item В \lstinline|Anaconda Navigator| найдите \lstinline|Jupyter Notebook|.
+			Если он не установлен, нажмите кнопку \lstinline|Install|. 
+			\item Запустите \lstinline|Jupyter Notebook|.
+		\end{enumerate}
+	\end{shaded}
+
+	После запуска \lstinline|Jupyter Notebook| вы, скорее всего, увидите длинный список папок.
+	Это вид \textit{корневой папки} вашего компьютера.
+	Её можно найти и обычным образом при использовании файловой системы.
+	Например, на \lstinline|Windows| корневая папка находится по адресу \lstinline|C:\Users\imya_polzovatelya|.
+	
+	Рекомендуется создать в корневой папке подпапку и назвать её так, как вам нравится.
+	Это будет наша рабочая папка, в которой мы будем хранить все материалы по ходу курса.
+	Сделать это можно как в файловой системе (просто создать папку в корневой папке), так и в \lstinline|Jupyter Notebook| (кнопка \lstinline|New| $\to$ \lstinline|Folder|).
+	
+	Файлы, в которых мы будем работать, называются <<тетрадками>> (notebooks). 
+	Чтобы создать новую тетрадку в той папке, которая отображается в интерфейсе \lstinline|Jupyter Notebook|, нажмите \lstinline|New| $\to$ \lstinline|Python 3|.
+	Тетрадка автоматически откроется в новом окне.
+	
+	\subsection{Установка новых библиотек}
+	Если вы обнаружили, что требуемая библиотека не установлена на вашем компьютере, то его можно установить следующим образом:
+	\begin{shaded}
+		\textbf{Инструкция по установке новых библиотек}.
+		\begin{enumerate}
+			\item Найдите на вашем компьютере программу \lstinline|Anaconda Prompt| (быстрее всего это можно сделать через поиск).
+			Запустите её.
+			Откроется интерфейс командной строки.
+			\item Введите
+			\begin{lstlisting}[language=bash]
+				conda install package_name
+			\end{lstlisting}
+			где \lstinline|package_name| -- название пакета.
+			Нажмите \lstinline|Enter|.
+		\end{enumerate}
+	\end{shaded}
+	
+	
+	\section{Тема 1: Введение в анализ данных и статистику}
+	%Введение в Python
+	%Введение в анализ данных и статистику
+	%Графический анализ данных и визуализация (pandas, matplotlib)
+	
+	\section{Тема 2: Элементы линейной алгебры}
+	%Элементы линейной алгебры, numpy
+	
+	\section{Тема 3: Введение в машинное обучение}
+	%Введение в машинное обучение
+	
+	\section{Тема 4: Линейные методы регрессии}
+	%Теория по ЛР
+	%Практика в sklearn
+ 	%Программирование собственной линейной модели
+	
+	\section{Тема 5: kNN}
+	%Теория и практика kNN
+	
+	\section{Тема 6: Решающие деревья. Случайный лес}
+	%Теория и практика
+	
+	\section{Тема 7: Нейронные сети}
+	%Теория + программирование нейронной сети
+	
+	\section{Тема 8: Кластеризация}
+	%k-Means, DBSCAN
+	
+\end{document}
