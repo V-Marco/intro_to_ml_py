@@ -50,7 +50,7 @@ __Материалы к занятиям:__
   - [Хорошая статья на Habr о введении в нейронные сети](https://habr.com/ru/post/312450/)
 - Тема 13: Кластеризация (13 марта):
   - [Notebook без решений](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_13/les_clustering_no_answ.ipynb)
-  - Notebook с решениями
+  - [Notebook с решениями](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_13/les_clustering.ipynb)
   - [Данные](https://github.com/V-Marco/intro_to_ml_py/blob/master/lesson_13/data_mouse.csv)
  
 __Проверочные работы:__
